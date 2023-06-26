@@ -1,0 +1,12 @@
+#toggleVisibilityBtn {
+    cursor: pointer;
+}
+
+body {
+    background-image: url('assets/rolled_out_deck.jpg');
+}
+
+/* 
+#passwordInput[type="password"] (
+    padding-right: 30px;
+) */

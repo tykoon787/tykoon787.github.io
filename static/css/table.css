@@ -1,0 +1,238 @@
+/* .navbar {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 0.3s, opacity 0.3s;
+}
+
+.navbar:hover {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+} */
+
+#game-container {
+    min-height: 100vh;
+    padding: 0px;
+}
+.player-1 {
+    /* position: sticky; */
+    /* top: 0; */
+    /* z-index: 1; */
+    display: none;
+}
+
+.player-2 {
+    /* position: fixed; */
+    /* bottom: 0; */
+    /* z-index: 1; */
+    display: none;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.player-1, .player-2 {
+    flex: 1
+}
+
+/* 
+.player-1 {
+    order: -1;
+} */
+
+
+.main-container {
+    position: relative;
+    height: 100vh;
+    /* height: calc(100vh - 56px); */
+    /* justify-content: space-between; */
+    background-image: url("../assets/background2.svg");
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* Old Styles*/
+.top-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    order: 1
+}
+
+.dev_table {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    order: 2;
+}
+
+.bottom-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    order: 3;
+}
+
+.left-container {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    order: 4;
+    transform: translate(-50%, -50%) rotate (-90deg);
+}
+
+.player-active {
+    border: 2px solid rgba(64, 221, 64, 0.842);
+    padding: 0px;
+    border-radius:6px;
+}
+
+.deck {
+    border-radius: 10px;
+    background-color: rgb(248, 195, 195);
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 80px;
+    margin-bottom: 5px;
+    padding: 3px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    /* white-space: nowrap; */
+}
+
+.deck-card {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    width: 50px;
+    height: 70px;
+    flex-shrink: 0;
+    margin: 3px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: grab;
+    /* z-index: 1; */
+}
+
+.deck-card:active {
+    cursor: grabbing;
+}
+
+.picking-pile {
+    display: flex;
+    padding: 3px;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    /* background-color: rgba(211, 32, 32, 0.671); */
+    border-radius: 3px;
+}
+
+/* Or Picking pile card */
+.picking-pile-card {
+    /* position: absolute;
+    margin: 10px;
+    top: 0px;
+    left: 0px; */
+    height: 100%;
+    width: auto;
+    border-radius: 5px;
+    /* background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat; */
+    cursor: grab;
+}
+
+.top-card {
+    height: 100px;
+    width: auto;
+}
+.community-container {
+    display: flex;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    /* position: relative; */
+    /* background-color: rgba(69, 121, 10, 0.9); */
+    /* height: 100%; */
+    border-radius: 3px;
+}
+
+.community-card {
+    height: 100%;
+    width: auto;
+    border-radius: 5px;
+    /* position : absolute;
+    margin: 10px;
+    top : 0;
+    left : 0px; */
+}
+
+
+/* Animation for showing the controls body */
+#player2-controls-body {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+
+#player2-controls-body.show {
+    opacity: 1;
+}
+
+
+/* Rotating the icon */
+.bi.bi-chevron-bar-down.downwards {
+    transform: rotate(180deg);
+}
+
+/* Media Queries for md screens */
+@media (max-width: 768px) {
+    /* Increase height of the deck container*/
+    .deck {
+        height: 120px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+    }
+
+    .deck-card {
+        width: 70px;
+        height: 100px;
+    }
+
+    .playing-pile, .pile-container {
+        height: 120px;
+    }
+
+}
+
+/* For lg screens */
+@media (min-width: 992px) {
+    .deck {
+        height: 80px;
+    }
+
+    .deck-card {
+        width: 50px;
+        height: 70px;
+    }
+
+    .playing-pile-card, .community-card {
+        left: 8px;
+    }
+
+
+}

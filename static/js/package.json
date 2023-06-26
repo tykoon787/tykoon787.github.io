@@ -1,0 +1,11 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "For my js files",
+  "main": "main.js",
+  "scripts": {
+    "start": "node test.js"
+  },
+  "author": "Oduor Otieno",
+  "license": "ISC"
+}
